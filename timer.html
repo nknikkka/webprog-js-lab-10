@@ -14,7 +14,26 @@
   <h1>Timer Task</h1>
   <input type="text" id="datetime-picker" placeholder="Select a date and time" />
   <button type="button" id="startTimer">Start Timer</button>
-
+<style>.timer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+  }
+  .field {
+    text-align: center;
+    margin: 0 15px;
+  }
+  .value {
+    font-size: 2em;
+    color: #333;
+  }
+  .label {
+    display: block;
+    font-size: 0.8em;
+    color: #555;
+  }</style>
   <div class="timer">
     <div class="field">
       <span class="value" id="days">00</span>
