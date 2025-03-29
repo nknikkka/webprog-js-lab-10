@@ -1,0 +1,26 @@
+<!-- timeout.html -->
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Timeout</title>
+</head>
+<body>
+    <button id="startTimeout">Start Timeout</button>
+    <button id="cancelTimeout">Cancel Timeout</button>
+
+    <script>
+        let timeoutId;
+
+        document.getElementById('startTimeout').addEventListener('click', () => {
+            timeoutId = setTimeout(() => {
+                alert('Час вийшов!');
+            }, 5000);
+        });
+
+        document.getElementById('cancelTimeout').addEventListener('click', () => {
+            clearTimeout(timeoutId);
+        });
+    </script>
+</body>
+</html>
