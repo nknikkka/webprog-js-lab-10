@@ -4,36 +4,61 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Timer Task</title>
+  
   <!-- Підключення стилів та скриптів для flatpickr -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+  <style>
+    /* Стилі для таймера */
+    .timer {
+      display: flex;
+      justify-content: center;
+      font-family: 'Arial', sans-serif;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    .field {
+      text-align: center;
+      margin: 0 15px;
+    }
+    .value {
+      font-size: 3em; /* Жирні більші цифри */
+      color: #333;
+    }
+    .label {
+      font-size: 1em;
+      color: #555;
+    }
+    /* Стилі для календаря */
+    input[type="text"] {
+      padding: 10px;
+      font-size: 1em;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 250px;
+      text-align: center;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 1em;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
 </head>
 <body>
   <h1>Timer Task</h1>
   <input type="text" id="datetime-picker" placeholder="Select a date and time" />
   <button type="button" id="startTimer">Start Timer</button>
-<style>.timer {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    font-family: 'Arial', sans-serif;
-    font-weight: bold;
-  }
-  .field {
-    text-align: center;
-    margin: 0 15px;
-  }
-  .value {
-    font-size: 2em;
-    color: #333;
-  }
-  .label {
-    display: block;
-    font-size: 0.8em;
-    color: #555;
-  }</style>
+
   <div class="timer">
     <div class="field">
       <span class="value" id="days">00</span>
